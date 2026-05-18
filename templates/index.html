@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Geodésica · OSIGA · MIDA</title>
   <meta name="description" content="Red Geodésica de Puntos Conocidos — Oficina del Sistema de Información Geoespacial Agropecuaria, MIDA Panamá" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/logo.png') }}" />
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet"
@@ -13,7 +13,7 @@
         crossorigin="" />
 
   <!-- Estilos del portal -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
 
@@ -25,7 +25,8 @@
 
       <!-- Logo MIDA/OSIGA -->
       <div class="logo-frame">
-        <img src="assets/logo.png" alt="Logo MIDA · OSIGA" class="header-logo" />
+        <img src="{{ url_for('static', filename='assets/logo.png') }}"
+             alt="Logo MIDA · OSIGA" class="header-logo" />
       </div>
 
       <!-- Títulos institucionales -->
@@ -125,7 +126,7 @@
           crossorigin=""></script>
 
   <!-- Lógica del portal -->
-  <script src="js/main.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 </html>
