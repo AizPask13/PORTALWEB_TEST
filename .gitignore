@@ -1,0 +1,17 @@
+# Datos fuente (no necesarios para el portal web)
+PUNTOS_CONOCIDOS/
+
+# App de referencia (no es parte del portal)
+app_muestra/
+
+# Logo duplicado en raíz (el original está en assets/)
+/logo.png
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editores
+.vscode/
+*.swp

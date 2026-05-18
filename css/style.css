@@ -1,0 +1,376 @@
+/* ── Reset & Base ───────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #eef4f1;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Variables (paleta MIDA/OSIGA) ─────────────── */
+:root {
+  --azul-oscuro:  #1a3a5c;
+  --azul-mida:    #1565c0;
+  --verde-mida:   #2e7d32;
+  --verde-claro:  #43a047;
+  --amarillo:     #f9a825;
+  --marron:       #5d4037;
+  --gris-bg:      #eef4f1;
+  --gris-card:    #ffffff;
+  --sombra:       0 4px 24px rgba(16, 36, 54, 0.10);
+}
+
+/* ── Header ─────────────────────────────────────── */
+.hero-header {
+  background: linear-gradient(135deg, #102a43 0%, #1a3a5c 52%, #0f5a4a 100%);
+  box-shadow: 0 6px 28px rgba(16, 42, 67, 0.30);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 36px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo-frame {
+  flex-shrink: 0;
+}
+
+.header-logo {
+  height: 86px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+}
+
+.header-titles {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-titles h1 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-titles h2 {
+  color: #dbeafe;
+  font-size: 13.5px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.header-titles h3 {
+  color: var(--amarillo);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.header-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Botón MIDA */
+.btn-mida {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, var(--verde-mida), var(--verde-claro));
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 3px 12px rgba(46, 125, 50, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-mida:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 125, 50, 0.55);
+}
+
+.btn-mida svg {
+  flex-shrink: 0;
+}
+
+/* Barras decorativas del logo */
+.brand-bars {
+  display: flex;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+}
+.bar-green  { background: var(--verde-mida); }
+.bar-yellow { background: var(--amarillo); }
+.bar-brown  { background: var(--marron); }
+.bar-blue   { background: var(--azul-mida); }
+
+/* ── Contenido ──────────────────────────────────── */
+.content-shell {
+  flex: 1;
+  padding: 26px 36px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Panel / card */
+.panel {
+  background: var(--gris-card);
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: var(--sombra);
+  margin-bottom: 22px;
+}
+
+.section-title {
+  color: var(--azul-oscuro);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 2px solid var(--verde-mida);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-ref {
+  background: var(--azul-oscuro);
+  color: #dbeafe;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Mapa ───────────────────────────────────────── */
+#map {
+  height: 490px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d6e4ec;
+}
+
+/* ── Popup Leaflet ──────────────────────────────── */
+.leaflet-popup-content-wrapper {
+  border-radius: 10px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(16,36,54,0.22) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  min-width: 290px;
+}
+
+.leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+.popup-wrap {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.popup-header {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-mida));
+  color: #ffffff;
+  padding: 11px 16px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-header-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--amarillo);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.popup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.popup-table tr:nth-child(odd)  { background: #f5f7fb; }
+.popup-table tr:nth-child(even) { background: #ffffff; }
+
+.popup-table td {
+  padding: 6px 10px;
+  border: 1px solid #e8ecf0;
+  vertical-align: middle;
+}
+
+.popup-table td.attr-label {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  white-space: nowrap;
+  width: 42%;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.popup-table td.attr-value {
+  color: #2c3e50;
+  font-size: 12px;
+}
+
+.popup-badge {
+  display: inline-block;
+  background: var(--verde-mida);
+  color: white;
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.popup-value-highlight {
+  font-weight: 700;
+  color: var(--azul-mida);
+}
+
+/* ── Tabla de puntos ────────────────────────────── */
+.table-hint {
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid #e8ecf0;
+}
+
+#puntos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 900px;
+}
+
+#puntos-table thead tr {
+  background: var(--azul-oscuro);
+}
+
+#puntos-table th {
+  padding: 10px 13px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 3px solid var(--verde-mida);
+  white-space: nowrap;
+  text-align: left;
+}
+
+#puntos-table tbody tr {
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+#puntos-table tbody tr:nth-child(odd)  { background: #f5f7fb; }
+#puntos-table tbody tr:nth-child(even) { background: #ffffff; }
+#puntos-table tbody tr:hover           { background: #e3f2fd; }
+#puntos-table tbody tr.active-row      { background: #bbdefb; }
+
+#puntos-table td {
+  padding: 9px 13px;
+  border: 1px solid #eef0f3;
+  white-space: nowrap;
+}
+
+#puntos-table td.col-nombre {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+#puntos-table td.col-num {
+  color: #667085;
+  text-align: center;
+  font-size: 11px;
+}
+
+#puntos-table td.col-ref {
+  text-align: center;
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.site-footer {
+  background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-mida));
+  color: #a8d0f0;
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  line-height: 1.8;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+    padding: 16px 18px;
+  }
+  .header-titles h1 { font-size: 16px; white-space: normal; }
+  .header-side { margin-left: 0; flex-direction: row; align-items: center; }
+  .content-shell { padding: 16px 14px; }
+  #map { height: 340px; }
+}
+
+@media (max-width: 560px) {
+  .header-logo { height: 60px; }
+  .header-titles h1 { font-size: 14px; }
+  .header-titles h2 { font-size: 12px; }
+  .btn-mida { font-size: 12px; padding: 8px 14px; }
+  .brand-bars { display: none; }
+}
