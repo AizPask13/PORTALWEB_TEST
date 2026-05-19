@@ -1,3 +1,8 @@
+// =============================================================================
+// Portal Web OSIGA — Lógica de mapa y tabla (Leaflet.js)
+// Autor: Manuel Ramos — Sección de Administración de Base de Datos · OSIGA · MIDA
+// =============================================================================
+
 // ── Inicializar mapa ─────────────────────────────────────────────────────────
 const map = L.map('map', { zoomControl: true });
 

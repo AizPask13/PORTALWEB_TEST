@@ -1,3 +1,13 @@
+# =============================================================================
+# Portal Web OSIGA — Backend Flask
+# Oficina del Sistema de Información Geoespacial Agropecuaria
+# Ministerio de Desarrollo Agropecuario · MIDA · Panamá
+#
+# Autor:      Manuel Ramos — Sección de Administración de Base de Datos
+# GitHub:     https://github.com/AizPask13/PORTALWEB_TEST
+# Licencia:   Uso institucional OSIGA / MIDA
+# =============================================================================
+
 import os
 import requests
 from flask import Flask, render_template, jsonify, abort
