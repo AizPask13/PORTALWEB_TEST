@@ -344,6 +344,283 @@ body {
   text-align: center;
 }
 
+/* ── Secciones OSIGA (página principal) ─────────── */
+.secciones-block {
+  margin-bottom: 10px;
+}
+
+.secciones-titulo {
+  color: var(--azul-oscuro);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--verde-mida);
+}
+
+.secciones-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.seccion-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 10px;
+  border-top: 4px solid var(--card-color, var(--verde-mida));
+  box-shadow: var(--sombra);
+  padding: 18px 16px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(16, 36, 54, 0.16);
+}
+
+.seccion-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--card-color) 12%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.seccion-card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--card-color);
+}
+
+.seccion-card-body {
+  flex: 1;
+}
+
+.seccion-card-titulo {
+  color: var(--azul-oscuro);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.seccion-card-desc {
+  color: #667085;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.seccion-card-arrow {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--card-color);
+  opacity: 0.6;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.seccion-card:hover .seccion-card-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* Badge "Producto destacado" */
+.producto-badge-wrap {
+  margin: 6px 0 12px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.producto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-mida));
+  color: #dbeafe;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.producto-badge svg {
+  stroke: var(--amarillo);
+}
+
+/* ── Página de Sección — Breadcrumb ─────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 12.5px;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--azul-mida);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.12s;
+}
+
+.breadcrumb-link:hover {
+  color: var(--verde-mida);
+}
+
+.breadcrumb-sep {
+  color: #adb5bd;
+}
+
+.breadcrumb-current {
+  color: #667085;
+  font-weight: 500;
+}
+
+/* ── Página de Sección — Hero ────────────────────── */
+.seccion-hero {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+  padding: 28px 28px 24px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  border-left: 6px solid var(--hero-color, var(--verde-mida));
+}
+
+.seccion-hero-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--hero-color) 14%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-hero-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--hero-color);
+}
+
+.seccion-hero-titulo {
+  color: var(--azul-oscuro);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.seccion-hero-desc {
+  color: #4a5568;
+  font-size: 13.5px;
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+/* ── Página de Sección — Funciones ──────────────── */
+.funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.funcion-card {
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid var(--card-color, var(--verde-mida));
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.funcion-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--card-color, var(--verde-mida));
+  margin-top: 5px;
+}
+
+.funcion-titulo {
+  color: var(--azul-oscuro);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.funcion-desc {
+  color: #4a5568;
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+/* ── Página de Sección — Otras secciones ────────── */
+.otras-secciones {
+  margin-top: 22px;
+}
+
+.otras-titulo {
+  color: var(--azul-oscuro);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--verde-mida);
+}
+
+.otras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.otra-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid var(--card-color, var(--verde-mida));
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--card-color, var(--verde-mida));
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.14s, color 0.14s;
+}
+
+.otra-card:hover {
+  background: var(--card-color, var(--verde-mida));
+  color: #ffffff;
+}
+
 /* ── Footer ─────────────────────────────────────── */
 .site-footer {
   background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-mida));
@@ -356,6 +633,10 @@ body {
 }
 
 /* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1200px) {
+  .secciones-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
@@ -365,6 +646,11 @@ body {
   .header-side { margin-left: 0; flex-direction: row; align-items: center; }
   .content-shell { padding: 16px 14px; }
   #map { height: 340px; }
+  .secciones-grid { grid-template-columns: repeat(2, 1fr); }
+  .funciones-grid { grid-template-columns: 1fr; }
+  .seccion-hero { flex-direction: column; gap: 14px; }
+  .seccion-hero-icon { width: 52px; height: 52px; }
+  .seccion-hero-titulo { font-size: 18px; }
 }
 
 @media (max-width: 560px) {
@@ -373,4 +659,5 @@ body {
   .header-titles h2 { font-size: 12px; }
   .btn-mida { font-size: 12px; padding: 8px 14px; }
   .brand-bars { display: none; }
+  .secciones-grid { grid-template-columns: 1fr; }
 }

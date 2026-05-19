@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ seccion.titulo }} · Portal OSIGA · MIDA</title>
+  <meta name="description" content="{{ seccion.descripcion_corta }}" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/logo.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════
+       HEADER (idéntico al portal principal)
+  ════════════════════════════════════════════ -->
+  <header class="hero-header">
+    <div class="header-inner">
+
+      <div class="logo-frame">
+        <img src="{{ url_for('static', filename='assets/logo.png') }}"
+             alt="Logo MIDA · OSIGA" class="header-logo" />
+      </div>
+
+      <div class="header-titles">
+        <h1>Portal Web OSIGA</h1>
+        <h2>Oficina del Sistema de Información Geoespacial Agropecuaria</h2>
+        <h3>Ministerio de Desarrollo Agropecuario &middot; MIDA &middot; Panamá</h3>
+      </div>
+
+      <div class="header-side">
+        <a href="https://mida.gob.pa/oficina-del-sistema-de-informacion-geoespacial-agropecuaria-osiga/"
+           target="_blank" rel="noopener noreferrer" class="btn-mida">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10
+                     15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          MIDA &middot; OSIGA
+        </a>
+        <div class="brand-bars">
+          <span class="bar bar-green"></span>
+          <span class="bar bar-yellow"></span>
+          <span class="bar bar-brown"></span>
+          <span class="bar bar-blue"></span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════
+       CONTENIDO DE LA SECCIÓN
+  ════════════════════════════════════════════ -->
+  <main class="content-shell">
+
+    <!-- Breadcrumb / navegación de regreso -->
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}" class="breadcrumb-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Portal OSIGA
+      </a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">{{ seccion.titulo }}</span>
+    </nav>
+
+    <!-- Hero de la sección -->
+    <section class="seccion-hero" style="--hero-color: {{ seccion.color }};">
+      <div class="seccion-hero-icon">
+        {% if seccion.icono == 'gps' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
+          <circle cx="12" cy="12" r="9" stroke-dasharray="3 2"/>
+        </svg>
+        {% elif seccion.icono == 'satellite' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+        </svg>
+        {% elif seccion.icono == 'chart' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+        </svg>
+        {% elif seccion.icono == 'map' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+          <line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>
+        </svg>
+        {% elif seccion.icono == 'database' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3"/>
+          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+        </svg>
+        {% endif %}
+      </div>
+      <div class="seccion-hero-text">
+        <h2 class="seccion-hero-titulo">{{ seccion.titulo }}</h2>
+        <p class="seccion-hero-desc">{{ seccion.descripcion }}</p>
+      </div>
+    </section>
+
+    <!-- Funciones / actividades -->
+    <section class="panel">
+      <h3 class="section-title">Funciones y Actividades</h3>
+      <div class="funciones-grid">
+        {% for f in seccion.funciones %}
+        <div class="funcion-card" style="--card-color: {{ seccion.color }};">
+          <div class="funcion-dot"></div>
+          <div class="funcion-body">
+            <h4 class="funcion-titulo">{{ f.titulo }}</h4>
+            <p class="funcion-desc">{{ f.descripcion }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Navegación a otras secciones -->
+    <section class="otras-secciones">
+      <h3 class="otras-titulo">Otras Secciones de OSIGA</h3>
+      <div class="otras-grid">
+        {% for s in secciones %}
+        {% if s.slug != seccion.slug %}
+        <a href="{{ url_for('seccion', slug=s.slug) }}" class="otra-card"
+           style="--card-color: {{ s.color }};">
+          <span class="otra-nombre">{{ s.titulo }}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    OSIGA &middot; Oficina del Sistema de Información Geoespacial Agropecuaria
+    &middot; Ministerio de Desarrollo Agropecuario &middot; Panamá
+    <br />
+    Portal Web OSIGA &middot; v2.0
+  </footer>
+
+</body>
+</html>
