@@ -344,6 +344,100 @@ body {
   text-align: center;
 }
 
+/* ── Acerca de OSIGA ────────────────────────────── */
+.acerca-osiga {
+  background: linear-gradient(135deg, #f0f7f4 0%, #e8f0fb 100%);
+  border-radius: 10px;
+  border-left: 5px solid var(--verde-mida);
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--sombra);
+}
+
+.acerca-mision {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.acerca-quote {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.acerca-texto {
+  font-size: 13.5px;
+  color: #2c3e50;
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.acerca-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  border-top: 1px solid #d0e4d8;
+  padding-top: 14px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 20px;
+}
+
+.meta-item:first-child {
+  padding-left: 0;
+}
+
+.meta-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--verde-mida);
+}
+
+.meta-value {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--azul-oscuro);
+}
+
+.meta-sep {
+  width: 1px;
+  height: 32px;
+  background: #c8ddd4;
+  flex-shrink: 0;
+}
+
+/* ── Herramientas (chips en página de sección) ───── */
+.hero-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.tool-tag {
+  display: inline-block;
+  background: color-mix(in srgb, var(--tool-color) 10%, white);
+  color: var(--tool-color);
+  border: 1px solid color-mix(in srgb, var(--tool-color) 30%, white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
 /* ── Secciones OSIGA (página principal) ─────────── */
 .secciones-block {
   margin-bottom: 10px;
@@ -651,6 +745,9 @@ body {
   .seccion-hero { flex-direction: column; gap: 14px; }
   .seccion-hero-icon { width: 52px; height: 52px; }
   .seccion-hero-titulo { font-size: 18px; }
+  .acerca-meta { gap: 12px; }
+  .meta-sep { display: none; }
+  .meta-item { padding: 0; }
 }
 
 @media (max-width: 560px) {

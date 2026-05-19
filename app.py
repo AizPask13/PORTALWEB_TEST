@@ -11,46 +11,58 @@ SECCIONES = [
         "titulo":      "Levantamiento de Campo",
         "icono":       "gps",
         "color":       "#2e7d32",
-        "descripcion_corta": "Captura y medición precisa de datos geoespaciales en campo mediante tecnología de posicionamiento y fotogrametría con drones.",
+        "descripcion_corta": "Captura y medición precisa de datos geoespaciales en campo mediante drones multiespectrales, GNSS de alta precisión y software fotogramétrico especializado.",
         "descripcion": (
-            "La Sección de Levantamiento de Campo se encarga de la captura, medición y "
-            "verificación de datos geoespaciales directamente en el terreno. Utiliza tecnología "
-            "de vanguardia como sistemas GNSS de alta precisión, drones (RPA) y equipos "
-            "topográficos para garantizar información confiable que soporte la toma de decisiones "
-            "en el sector agropecuario nacional."
+            "La Sección de Levantamiento de Campo captura, mide y verifica datos geoespaciales "
+            "directamente en el terreno utilizando drones RPA (DJI Mavic 3 Multiespectral) con "
+            "antenas GNSS D-RTK2 para posicionamiento centimétrico. Los vuelos se procesan con "
+            "Pix4D Field, Pix4D Mapper y Agisoft Metashape, generando ortofotomosaicos y modelos "
+            "digitales de elevación de alta resolución que alimentan los análisis de toda la oficina."
         ),
+        "herramientas": [
+            "DJI Mavic 3 Multiespectral",
+            "Antenas D-RTK2",
+            "Pix4D Field",
+            "Pix4D Mapper",
+            "Agisoft Metashape",
+            "GNSS SIRGAS-CON",
+        ],
         "funciones": [
             {
                 "titulo":      "Levantamiento Fotogramétrico con RPA",
                 "descripcion": (
-                    "Captura de imágenes aéreas mediante drones (Remotely Piloted Aircraft) "
-                    "para la generación de ortofotomosaicos, modelos digitales de elevación y "
-                    "análisis de superficie con alta precisión geométrica a escala de parcela y finca."
+                    "Vuelos con drones DJI Mavic 3 Multiespectral —con estabilización por antenas "
+                    "D-RTK2— para la captura de imágenes aéreas de alta precisión. Los datos se "
+                    "procesan en Pix4D Mapper y Agisoft Metashape, generando ortofotomosaicos, "
+                    "modelos digitales de superficie (DSM/DTM) y nubes de puntos 3D a escala de "
+                    "parcela y finca."
                 ),
             },
             {
                 "titulo":      "Red Geodésica de Puntos Conocidos",
                 "descripcion": (
                     "Establecimiento y mantenimiento de la red de puntos de control geodésico "
-                    "SIRGAS-CON, con coordenadas precisas en el marco de referencia geocéntrico "
-                    "para Panamá. Estos puntos sirven de base para todos los levantamientos "
-                    "ejecutados por OSIGA."
+                    "SIRGAS-CON, procesados con Trimble RTX Post-Processing. Estos puntos de "
+                    "coordenadas certificadas sirven de base de referencia para todos los "
+                    "levantamientos ejecutados por OSIGA en el territorio nacional."
                 ),
             },
             {
                 "titulo":      "Características en Campo de Cultivos",
                 "descripcion": (
-                    "Determinación de parámetros agronómicos en campo: estado fenológico, "
-                    "densidad de siembra, condición del cultivo y variables que inciden en el "
-                    "desarrollo productivo, para alimentar los sistemas de información del sector."
+                    "Determinación de parámetros agronómicos en campo mediante vuelos con cámara "
+                    "multiespectral: estado fenológico, densidad de siembra, cobertura del dosel "
+                    "y condiciones de estrés hídrico o fitosanitario. Los datos procesados en "
+                    "Pix4D Field permiten mapas de variabilidad para la toma de decisiones."
                 ),
             },
             {
                 "titulo":      "Superficie Ocupada y Uso del Suelo",
                 "descripcion": (
                     "Medición y delimitación de superficies agrícolas, determinación del uso "
-                    "actual del suelo y estimación de áreas de producción para el seguimiento "
-                    "estadístico del sector agropecuario nacional."
+                    "actual del suelo y estimación de áreas de producción. Los productos "
+                    "fotogramétricos generados alimentan el catastro agropecuario y el "
+                    "seguimiento estadístico del sector a escala nacional."
                 ),
             },
         ],
@@ -60,45 +72,57 @@ SECCIONES = [
         "titulo":      "Imágenes Geoespaciales",
         "icono":       "satellite",
         "color":       "#1565c0",
-        "descripcion_corta": "Adquisición, procesamiento y análisis de imágenes satelitales para el monitoreo continuo del territorio y los recursos agropecuarios.",
+        "descripcion_corta": "Monitoreo satelital del agro panameño con Google Earth Engine, SNAP Copernicus y datos NASA para índices vegetativos, anomalías climáticas y plataformas de visualización.",
         "descripcion": (
-            "La Sección de Imágenes Geoespaciales gestiona la adquisición y el procesamiento "
-            "de imágenes de sensores remotos —satélites ópticos y radar— para el seguimiento "
-            "de cultivos, la detección de eventos climáticos adversos y el desarrollo de "
-            "plataformas de distribución de datos geoespaciales al servicio del agro panameño."
+            "La Sección de Imágenes Geoespaciales adquiere, procesa y analiza imágenes de "
+            "sensores remotos para el monitoreo continuo del territorio agropecuario. Trabaja "
+            "con catálogos satelitales de Sentinel (Copernicus/ESA), Landsat y MODIS/NASA, "
+            "procesados en Google Earth Engine y SNAP. Desarrolla aplicaciones de visualización "
+            "geoespacial que ponen esta información al alcance de técnicos y tomadores de "
+            "decisiones del sector agropecuario panameño."
         ),
+        "herramientas": [
+            "Google Earth Engine",
+            "SNAP Copernicus",
+            "Sentinel (ESA)",
+            "Landsat (USGS)",
+            "MODIS / NASA Earthdata",
+        ],
         "funciones": [
             {
                 "titulo":      "Monitoreo Geoespacial por Sensores Remotos",
                 "descripcion": (
-                    "Seguimiento continuo del territorio nacional mediante imágenes satelitales "
-                    "multiespectrales y de radar, integrando plataformas Sentinel, Landsat y MODIS "
-                    "para el análisis de cobertura, uso del suelo y dinámica territorial."
+                    "Seguimiento continuo del territorio nacional mediante imágenes de Sentinel-2 "
+                    "(óptico), Sentinel-1 (radar) y Landsat, procesadas en Google Earth Engine. "
+                    "Permite análisis de cobertura, uso del suelo, dinámica territorial y "
+                    "comparación de variables históricas a escala nacional."
                 ),
             },
             {
                 "titulo":      "Detección de Anomalías Climáticas",
                 "descripcion": (
-                    "Identificación y análisis de eventos climáticos adversos —sequías, inundaciones, "
-                    "anomalías de temperatura— mediante series temporales de imágenes satelitales "
-                    "combinadas con datos meteorológicos para alertas tempranas en el agro."
+                    "Identificación de eventos adversos —sequías, inundaciones, anomalías de "
+                    "temperatura— mediante series temporales satelitales y datos climáticos de "
+                    "NASA Earthdata. Integrado en Google Earth Engine para alertas tempranas "
+                    "que orientan la respuesta del sector agropecuario."
                 ),
             },
             {
                 "titulo":      "Índices Vegetativos en Cultivos",
                 "descripcion": (
-                    "Cálculo y seguimiento de índices espectrales (NDVI, EVI, SAVI) para evaluar "
-                    "el estado, vigor y desarrollo de los cultivos estratégicos a escala regional, "
-                    "brindando insumos para estimaciones de rendimiento y alertas fitosanitarias."
+                    "Cálculo y seguimiento de índices espectrales (NDVI, EVI, SAVI, NDRE) "
+                    "con imágenes Sentinel-2 y Landsat procesadas en GEE y SNAP. Evalúa el "
+                    "vigor, estado y desarrollo de cultivos estratégicos, brindando insumos "
+                    "para estimaciones de rendimiento y alertas fitosanitarias a escala regional."
                 ),
             },
             {
-                "titulo":      "Plataformas de Datos Geoespaciales",
+                "titulo":      "Desarrollo de Plataformas de Visualización",
                 "descripcion": (
-                    "Diseño e implementación de plataformas para la distribución, visualización "
-                    "y acceso a catálogos de imágenes y productos derivados del procesamiento "
-                    "satelital, facilitando el uso de la información por parte de técnicos y "
-                    "tomadores de decisiones."
+                    "Construcción de aplicaciones web geoespaciales en Google Earth Engine "
+                    "(GEE Apps) para la distribución interactiva de productos derivados del "
+                    "procesamiento satelital: mapas de índices, series temporales y catálogos "
+                    "de imágenes accesibles para técnicos del MIDA y actores del sector."
                 ),
             },
         ],
@@ -108,38 +132,54 @@ SECCIONES = [
         "titulo":      "Análisis y Calidad",
         "icono":       "chart",
         "color":       "#e65100",
-        "descripcion_corta": "Garantiza la integridad y exactitud de los datos geoespaciales, estableciendo estándares y generando informes técnicos para la toma de decisiones.",
+        "descripcion_corta": "Control de calidad de ortomosaicos y productos fotogramétricos generados por Pix4D y Agisoft, con producción de informes técnicos para la toma de decisiones agropecuarias.",
         "descripcion": (
-            "La Sección de Análisis y Calidad define los estándares que rigen la producción "
-            "de información geoespacial en OSIGA y vela porque todos los productos cumplan "
-            "criterios de exactitud, completitud y consistencia. Genera además informes "
-            "analíticos que sustentan las políticas agropecuarias nacionales."
+            "La Sección de Análisis y Calidad define los estándares que rigen todos los "
+            "productos de OSIGA y verifica que los ortomosaicos, modelos digitales de elevación "
+            "e índices generados por las plataformas fotogramétricas (Agisoft Metashape, Pix4D) "
+            "cumplan criterios de exactitud geométrica y temática. Genera además informes "
+            "analíticos que sustentan la toma de decisiones del MIDA y del sector agropecuario."
         ),
+        "herramientas": [
+            "Agisoft Metashape",
+            "Pix4D Mapper",
+            "Pix4D Field",
+        ],
         "funciones": [
             {
-                "titulo":      "Criterios de Calidad de Datos",
+                "titulo":      "Criterios de Calidad de Datos Geoespaciales",
                 "descripcion": (
-                    "Definición y aplicación de normas y estándares de calidad para datos "
-                    "geoespaciales, alineados con la norma ISO 19157 y las directrices del "
-                    "marco nacional de información geográfica, garantizando datos confiables "
-                    "y comparables a lo largo del tiempo."
+                    "Definición y aplicación de normas de calidad para datos geoespaciales "
+                    "alineadas con ISO 19157. Establece los umbrales de error aceptable para "
+                    "ortomosaicos y MDEs producidos por Agisoft y Pix4D, garantizando productos "
+                    "comparables y confiables a lo largo del tiempo."
+                ),
+            },
+            {
+                "titulo":      "Evaluación de Productos Fotogramétricos",
+                "descripcion": (
+                    "Revisión y validación de los reportes de procesamiento generados por "
+                    "Agisoft Metashape y Pix4D Mapper: análisis de error en puntos de control, "
+                    "densidad de nube de puntos, resolución de ortofoto y exactitud posicional "
+                    "de los modelos digitales de superficie."
                 ),
             },
             {
                 "titulo":      "Producción de Informes Técnicos",
                 "descripcion": (
-                    "Elaboración de reportes analíticos que sintetizan hallazgos geoespaciales "
-                    "para sustentar la toma de decisiones en políticas agropecuarias, "
-                    "planificación territorial, gestión de riesgos y declaratoria de emergencias."
+                    "Elaboración de reportes analíticos que sintetizan los hallazgos "
+                    "geoespaciales para sustentar políticas agropecuarias, planificación "
+                    "territorial, gestión de riesgos y evaluación de daños por eventos "
+                    "climáticos, dirigidos a la alta dirección del MIDA."
                 ),
             },
             {
-                "titulo":      "Medición y Mejoramiento de la Calidad",
+                "titulo":      "Mejoramiento Continuo de la Calidad",
                 "descripcion": (
-                    "Implementación de procesos de control, medición de métricas de calidad "
-                    "y mejora continua en la producción de información geoespacial, asegurando "
-                    "que los datos generados por OSIGA sean oportunos, exactos y útiles para "
-                    "los usuarios finales."
+                    "Implementación de procesos de control y mejora continua en la cadena "
+                    "de producción de información geoespacial. Retroalimenta a las secciones "
+                    "de Levantamiento e Imágenes con recomendaciones para optimizar la "
+                    "precisión de los productos y reducir re-procesamientos."
                 ),
             },
         ],
@@ -149,37 +189,43 @@ SECCIONES = [
         "titulo":      "Cartografía",
         "icono":       "map",
         "color":       "#5d4037",
-        "descripcion_corta": "Producción y revisión de cartografía temática del sector agropecuario, con levantamiento espacial para análisis y planificación del territorio.",
+        "descripcion_corta": "Producción y revisión de cartografía temática del sector agropecuario con QGIS, incluyendo mapas de uso del suelo, cobertura y levantamiento de polígonos de finca.",
         "descripcion": (
-            "La Sección de Cartografía se encarga de la producción, revisión y actualización "
-            "de la cartografía temática del sector agropecuario panameño. Genera mapas de "
-            "uso del suelo, cobertura, infraestructura y zonificación que orientan la "
-            "planificación estratégica y la gestión territorial del MIDA."
+            "La Sección de Cartografía produce, revisa y actualiza la cartografía temática "
+            "del sector agropecuario panameño utilizando QGIS como plataforma SIG principal. "
+            "Genera mapas de uso del suelo, cobertura vegetal, infraestructura y zonificación "
+            "agropecuaria, y ejecuta el levantamiento digital de polígonos de fincas y "
+            "unidades territoriales que alimentan el catastro agropecuario del MIDA."
         ),
+        "herramientas": [
+            "QGIS",
+        ],
         "funciones": [
             {
                 "titulo":      "Revisión de Información Cartográfica",
                 "descripcion": (
-                    "Verificación, actualización y validación de datos cartográficos existentes, "
-                    "asegurando la coherencia espacial y temática de los productos con las "
-                    "fuentes oficiales del Instituto Geográfico Nacional Tommy Guardia y "
-                    "organismos internacionales."
+                    "Verificación, actualización y validación de capas cartográficas en QGIS, "
+                    "asegurando coherencia espacial y temática con las fuentes del Instituto "
+                    "Geográfico Nacional Tommy Guardia y organismos internacionales. Mantiene "
+                    "la integridad topológica de los datos vectoriales y ráster institucionales."
                 ),
             },
             {
                 "titulo":      "Elaboración de Mapas Temáticos",
                 "descripcion": (
-                    "Diseño y producción de cartografía temática sobre uso del suelo, cobertura "
-                    "vegetal, aptitud agrícola, infraestructura agropecuaria y distribución de "
-                    "cultivos a escala nacional, provincial y de cuenca."
+                    "Diseño y producción de cartografía temática en QGIS sobre uso del suelo, "
+                    "cobertura vegetal, aptitud agrícola, infraestructura agropecuaria y "
+                    "distribución de cultivos a escalas nacional, provincial y de cuenca, "
+                    "listos para publicación y consulta institucional."
                 ),
             },
             {
                 "titulo":      "Levantamiento de Polígonos Geoespaciales",
                 "descripcion": (
-                    "Digitalización y captura de polígonos de parcelas agrícolas, fincas y "
-                    "unidades territoriales para el cálculo de superficies, perímetros y "
-                    "análisis de distribución espacial que alimentan el catastro agropecuario."
+                    "Digitalización y captura en QGIS de polígonos de parcelas agrícolas, "
+                    "fincas y unidades territoriales. Los polígonos generados permiten calcular "
+                    "superficies y perímetros precisos, ejecutar análisis de distribución "
+                    "espacial y alimentar el catastro agropecuario del MIDA."
                 ),
             },
         ],
@@ -189,49 +235,74 @@ SECCIONES = [
         "titulo":      "Administración de Base de Datos",
         "icono":       "database",
         "color":       "#1a3a5c",
-        "descripcion_corta": "Diseño, mantenimiento y evolución tecnológica de los sistemas de información geoespacial de OSIGA, integrando IA y bases de datos espaciales.",
+        "descripcion_corta": "Gestión integral de datos geoespaciales con PostgreSQL/PostGIS, KoboToolbox, Power BI, Machine Learning y Agentes de IA para poner la información de OSIGA al servicio del MIDA.",
         "descripcion": (
-            "La Sección de Administración de Base de Datos gestiona la infraestructura de "
-            "datos geoespaciales de OSIGA, asegurando la disponibilidad, integridad y "
-            "accesibilidad de la información. Lidera además el desarrollo tecnológico del "
-            "portal web institucional y la integración de modelos de inteligencia artificial "
-            "y agentes autónomos para la automatización de flujos de datos geoespaciales."
+            "La Sección de Administración de Base de Datos es el eje tecnológico de OSIGA: "
+            "administra la infraestructura de datos espaciales sobre PostgreSQL con las "
+            "extensiones PostGIS y PGVector, integra formularios de campo vía KoboToolbox API, "
+            "y centraliza toda la información generada por la oficina para garantizar su "
+            "disponibilidad, integridad y trazabilidad. Automatiza flujos de trabajo con KNIME, "
+            "visualiza indicadores en Power BI e integra modelos de Machine Learning (Random "
+            "Forest, CNN) y Agentes de IA para apoyar la toma de decisiones del MIDA a favor "
+            "del productor panameño."
         ),
+        "herramientas": [
+            "PostgreSQL",
+            "PostGIS",
+            "PGVector",
+            "KoboToolbox",
+            "Power BI",
+            "KNIME",
+            "Python",
+            "Random Forest",
+            "CNN",
+        ],
         "funciones": [
             {
-                "titulo":      "Administración de Datos Geoespaciales",
+                "titulo":      "Administración de Datos Geoespaciales (PostgreSQL + PostGIS + PGVector)",
                 "descripcion": (
-                    "Gestión integral de bases de datos espaciales, incluyendo modelado, "
-                    "carga, mantenimiento, respaldo y control de versiones de la información "
-                    "geoespacial institucional. Garantiza la disponibilidad y consistencia "
-                    "de los datos para todas las secciones de OSIGA."
+                    "Gestión integral de la base de datos espacial sobre PostgreSQL con "
+                    "extensiones PostGIS (análisis geoespacial SQL) y PGVector (embeddings "
+                    "vectoriales para IA). Incluye modelado de esquemas, carga de capas, "
+                    "respaldos, control de versiones y acceso centralizado a todos los datos "
+                    "producidos por las secciones de OSIGA."
                 ),
             },
             {
-                "titulo":      "Desarrollo del Portal Web OSIGA",
+                "titulo":      "Gestión de Datos de Campo con KoboToolbox",
                 "descripcion": (
-                    "Diseño e implementación del Portal Web OSIGA, plataforma de acceso "
-                    "público a los datos geoespaciales del sector agropecuario. Incluye "
-                    "el visor de la Red Geodésica, integración con KoboToolbox y la "
-                    "arquitectura Flask/Leaflet sobre Render.com."
+                    "Diseño de Smart Forms en KoboToolbox para el registro estructurado de "
+                    "datos agropecuarios en campo. Extracción automatizada vía API REST e "
+                    "integración en la base de datos central, eliminando el papel y garantizando "
+                    "trazabilidad desde el levantamiento hasta el análisis final."
                 ),
             },
             {
-                "titulo":      "Tecnología con Modelos de IA",
+                "titulo":      "Visualización con Business Intelligence (Power BI)",
                 "descripcion": (
-                    "Integración de modelos de inteligencia artificial para el análisis de "
-                    "datos geoespaciales: clasificación de coberturas, detección de cambios, "
-                    "predicción de rendimientos agrícolas y procesamiento automatizado de "
-                    "imágenes satelitales con modelos de visión computacional."
+                    "Construcción de dashboards interactivos en Power BI que consolidan "
+                    "indicadores geoespaciales, agrícolas y de calidad de datos de OSIGA. "
+                    "Permite a la dirección del MIDA consultar el estado del sector "
+                    "agropecuario en tiempo real con visualizaciones claras y accionables."
                 ),
             },
             {
-                "titulo":      "Desarrollo de Agentes Inteligentes",
+                "titulo":      "Machine Learning para Análisis Geoespacial",
                 "descripcion": (
-                    "Construcción de agentes de IA especializados en la automatización de "
-                    "flujos de datos geoespaciales, consultas inteligentes a bases de datos "
-                    "espaciales y soporte a la toma de decisiones en tiempo real para "
-                    "técnicos y gestores del sector agropecuario."
+                    "Entrenamiento e implementación de modelos de clasificación y detección "
+                    "con algoritmos de Machine Learning (Random Forest) y redes neuronales "
+                    "convolucionales (CNN) aplicados a imágenes satelitales y fotogramétricas: "
+                    "clasificación de coberturas, detección de áreas afectadas y estimación "
+                    "de superficies de cultivo."
+                ),
+            },
+            {
+                "titulo":      "Automatización con KNIME y Agentes de IA",
+                "descripcion": (
+                    "Orquestación de flujos de trabajo ETL con KNIME para la integración "
+                    "automática de datos entre fuentes heterogéneas (satélite, campo, cartografía). "
+                    "Desarrollo de Agentes de IA y CLIs especializados que ejecutan consultas "
+                    "inteligentes, generan reportes automáticos y reducen tiempos de análisis."
                 ),
             },
         ],

@@ -105,6 +105,13 @@
       <div class="seccion-hero-text">
         <h2 class="seccion-hero-titulo">{{ seccion.titulo }}</h2>
         <p class="seccion-hero-desc">{{ seccion.descripcion }}</p>
+        {% if seccion.herramientas %}
+        <div class="hero-tools">
+          {% for tool in seccion.herramientas %}
+          <span class="tool-tag" style="--tool-color: {{ seccion.color }};">{{ tool }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </section>
 
