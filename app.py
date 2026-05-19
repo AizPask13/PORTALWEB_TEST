@@ -235,7 +235,7 @@ SECCIONES = [
         "titulo":      "Administración de Base de Datos",
         "icono":       "database",
         "color":       "#1a3a5c",
-        "descripcion_corta": "Gestión integral de datos geoespaciales con PostgreSQL/PostGIS, KoboToolbox, Power BI, Machine Learning y Agentes de IA para poner la información de OSIGA al servicio del MIDA.",
+        "descripcion_corta": "Gestión integral de datos geoespaciales con PostgreSQL/PostGIS, KoboToolbox, Power BI, Machine Learning y Agentes de IA para brindar la información al MIDA para la toma de decisiones.",
         "descripcion": (
             "La Sección de Administración de Base de Datos es el eje tecnológico de OSIGA: "
             "administra la infraestructura de datos espaciales sobre PostgreSQL con las "
