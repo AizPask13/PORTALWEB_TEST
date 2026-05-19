@@ -179,7 +179,7 @@ SECCIONES = [
                     "Implementación de procesos de control y mejora continua en la cadena "
                     "de producción de información geoespacial. Retroalimenta a las secciones "
                     "de Levantamiento e Imágenes con recomendaciones para optimizar la "
-                    "precisión de los productos y reducir re-procesamientos."
+                    "precisión de los productos y reducir reprocesamientos."
                 ),
             },
         ],
